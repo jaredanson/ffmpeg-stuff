@@ -5,6 +5,7 @@
 * crf (0-51) default 23, 0 is lossless
 * preset (slow/medium/fast) more options https://gist.github.com/asus4/f5aef0f3f46fde198436da12f0332013
 * [tune](#tune-settings)
+* hide_banner
 
 
 ## cut video without encoding
