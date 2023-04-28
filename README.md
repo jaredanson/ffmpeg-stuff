@@ -7,6 +7,10 @@
 * [tune](#tune-settings)
 * hide_banner
 
+## intel arc
+
+`av1_qsv, h264_qsv, hevc_qsv, vp9_qsv`
+
 
 ## cut video without encoding
 
@@ -19,11 +23,11 @@
 
 ## x264 gpu
 
-`./ffmpeg.exe -vsync 0 -hwaccel cuda -hwaccel_output_format cuda -i input.mp4 -c:a copy -c:v h264_nvenc -c:s copy -crf 23 output.mp4 `
+`./ffmpeg.exe -vsync 0 -hwaccel qsv -i input.mp4 -c:a copy -c:v h264_qsv -c:s copy -crf 23 output.mp4 `
 
 ## hevc/265 gpu
 
-` ./ffmpeg.exe -vsync 0 -hwaccel cuda -hwaccel_output_format cuda -i input.mp4 -c:a copy -c:v hevc_nvenc -c:s copy -crf 23 -preset slow output.mp4 `
+` ./ffmpeg.exe -vsync 0 -hwaccel cuda -i input.mp4 -c:a copy -c:v hevc_qsv -c:s copy -crf 23 -preset slow output.mp4 `
 
 ## youtube-dl and ffmpeg
 
