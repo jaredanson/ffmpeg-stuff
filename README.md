@@ -23,15 +23,15 @@
 
 ## x264 gpu
 
-`./ffmpeg.exe -hwaccel qsv -i input.mp4 -fps_mode passthrough -c:a copy -c:v h264_qsv -c:s copy -global_quality 21 output.mp4 `
+`./ffmpeg.exe -hwaccel qsv -hwaccel_output_format qsv -i input.mp4 -fps_mode passthrough -c:a copy -c:v h264_qsv -c:s copy -global_quality 21 output.mp4 `
 
 ## hevc/265 gpu
 
-` ./ffmpeg.exe -hwaccel qsv -i input.mp4 -fps_mode passthrough -c:a copy -c:v hevc_qsv -c:s copy -global_quality 21 -preset slow output.mp4 `
+` ./ffmpeg.exe -hwaccel qsv -hwaccel_output_format qsv -i input.mp4 -fps_mode passthrough -c:a copy -c:v hevc_qsv -c:s copy -global_quality 21 -preset slow output.mp4 `
 
 ## av1 gpu
 
-` ./ffmpeg.exe -hwaccel qsv -i input.mp4 -fps_mode passthrough -c:a copy -c:v av1_qsv -c:s copy -global_quality 21 -preset slow output.mp4 `
+` ./ffmpeg.exe -hwaccel qsv -hwaccel_output_format qsv -i input.mp4 -fps_mode passthrough -c:a copy -c:v av1_qsv -c:s copy -global_quality 21 -preset slow output.mp4 `
 
 ## youtube-dl and ffmpeg
 
