@@ -3,7 +3,7 @@
 ### settings
 
 * crf (0-51) default 23, 0 is lossless
-* preset (slow/medium/fast) more options https://gist.github.com/asus4/f5aef0f3f46fde198436da12f0332013
+* preset (veryslow 1/slower 2/slow 3/medium 4/fast 5/faster 6/veryfast 7) 0 to 7 (default 0)
 * [tune](#tune-settings)
 * hide_banner
 
@@ -23,11 +23,15 @@
 
 ## x264 gpu
 
-`./ffmpeg.exe -vsync 0 -hwaccel qsv -i input.mp4 -c:a copy -c:v h264_qsv -c:s copy -crf 23 output.mp4 `
+`./ffmpeg.exe -hwaccel qsv -i input.mp4 -fps_mode passthrough -c:a copy -c:v h264_qsv -c:s copy -crf 23 output.mp4 `
 
 ## hevc/265 gpu
 
-` ./ffmpeg.exe -vsync 0 -hwaccel cuda -i input.mp4 -c:a copy -c:v hevc_qsv -c:s copy -crf 23 -preset slow output.mp4 `
+` ./ffmpeg.exe -hwaccel qsv -i input.mp4 -fps_mode passthrough -c:a copy -c:v hevc_qsv -c:s copy -crf 23 -preset slow output.mp4 `
+
+## av1 gpu
+
+` ./ffmpeg.exe -hwaccel qsv -i input.mp4 -fps_mode passthrough -c:a copy -c:v av1_qsv -c:s copy -crf 23 -preset slow output.mp4 `
 
 ## youtube-dl and ffmpeg
 
