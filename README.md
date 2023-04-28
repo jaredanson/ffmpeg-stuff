@@ -2,7 +2,7 @@
 
 ### settings
 
-* crf (0-51) default 23, 0 is lossless
+* crf (0-63) default 23, 0 is lossless
 * preset (veryslow 1/slower 2/slow 3/medium 4/fast 5/faster 6/veryfast 7) 0 to 7 (default 0)
 * [tune](#tune-settings)
 * hide_banner
